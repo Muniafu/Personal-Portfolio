@@ -71,8 +71,6 @@ portfolio/
 │   └── server.js
 │
 ├── .github/                 # CI/CD workflows
-├── .dockerignore            # Docker setup (optional)
-├── docker-compose.yml
 ├── README.md
 └── .gitignore
 
@@ -98,7 +96,7 @@ portfolio/
 - **TanStack Router:** [TanStack Router Documentation](https://tanstack.com/router/latest)
 - **Security Best Practices:** [OWASP Cheat Sheet](https://cheatsheetseries.owasp.org/)
 
-## Setup Instructions
+## Setup Instructions 
 
 ### Prerequisites
 - **Node.js v18+** must be installed.
@@ -106,4 +104,43 @@ portfolio/
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/Muniafu/Personal-Portfolio.git
+
+
+## Install Dependencies
+
+**Frontend:**
+
+cd portfolio/client
+npm install
+
+**Backend:** 
+
+cd portfolio/server
+npm install
+
+**Environment Configuration**
+
+    Create a .env file in both the /client and /server directories. Use provided .env.example files as a guide to set up your environment variables.
+
+## Running the Application
+
+Start the Backend (Express Server):
+
+cd portfolio/server
+npm run dev
+
+Start the Frontend (Vite Dev Server):
+
+cd portfolio/client
+npm run dev
+
+Visit the frontend at http://localhost:3000 (or your configured port).
+
+## Contribution Guidelines
+
+    Follow the GitHub Flow: Create a branch off main, commit changes, and open a pull request.
+    Report bugs or request features by opening GitHub issues.
+    Ensure your pull requests include tests (using Jest or your preferred testing framework) and pass code reviews.
+
+Happy coding! 🚀
