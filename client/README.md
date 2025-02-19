@@ -71,8 +71,6 @@ portfolio/
 │   └── server.js
 │
 ├── .github/                 # CI/CD workflows
-├── .dockerignore            # Docker setup (optional)
-├── docker-compose.yml
 ├── README.md
 └── .gitignore
 
