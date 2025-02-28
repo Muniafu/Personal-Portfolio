@@ -1,0 +1,40 @@
+// Container for the goals/tracker feature
+.goalsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+// Individual goal items
+.goalItem {
+    background-color: var(--color-neutral);
+    color: var(--color-light);
+    padding: 1rem;
+    border-radius: 8px;
+    flex: 1 1 calc(33.333% - 1rem);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.goalItem:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-accent);
+}
+
+// Goal item title
+.goalTitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.progressBar {
+    @apply h-4 bg-[var(--color-secondary)] rounded-full overflow-hidden;
+}
+
+.progressFill {
+    @apply h-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-neutral)] transition-all duration-500;
+}
+
+.chartTooltip {
+    @apply glass-effect p-3 rounded-lg text-sm;
+}

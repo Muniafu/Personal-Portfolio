@@ -1,0 +1,36 @@
+// Home page container with full viewport height
+.homeContainer {
+    display: flex;
+    padding: 2rem;
+    @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)];
+}
+
+.projectCard {
+    @apply glass-effect hover: transform hover: scale-105 transition-all duration-300 cursor-pointer;
+}
+
+.aiInteraction {
+    @apply border border-[var(--color-accent)] hover:bg-[var(--color-secondary)] p-6 rounded-lg transition-all duration-500;
+}
+
+.homeTitle {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.homeSubtitle {
+    fon-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: slideIn 1s ease-in-out;
+}
+
+// Responsive typography adjusments
+@media (max-width: 768px) {
+    .homeTitle {
+        font-size: 2.5rem;
+    }
+    .homeSubtitle {
+        font-size: 1.25rem;
+    }
+}

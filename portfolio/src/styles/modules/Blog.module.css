@@ -1,0 +1,31 @@
+// Container for the blog overview page
+.blogContainer {
+    padding: 2rem;
+    background-color: var(--color-light);
+    color: var(--color-primary);
+}
+
+// Styling for individual blog cards
+.blogCard {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-neutral);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blogCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+// Blog titile and content styles
+.blogTitle {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.blogContent {
+    font-size: 1rem;
+    line-height: 1.6;
+}

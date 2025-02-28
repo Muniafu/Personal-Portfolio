@@ -1,0 +1,38 @@
+// Navbar Container
+.navbar {
+    @apply glass-effect fixev w-full z-50;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Logo Styling
+.navLogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+// Navigation links container
+.NavLinks {
+    display: flex;
+    gap: 1rem;
+}
+
+.NavLink {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    @apply text-[var(--color-light)] hover:text-[var(--color-accent)] transition-colors duration-300;
+}
+
+.NavLink::after {
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--color-accent)] transition-all duration-300;
+    content: '';
+}
+
+.NavLink:hover::after {
+    @apply w-full;
+}

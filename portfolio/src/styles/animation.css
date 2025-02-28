@@ -1,0 +1,130 @@
+// Fade In Animations
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-i-out;
+}
+
+// Slid In Animations
+@keyframes slideIn {
+    from {
+        transform: translateY(2opx);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+// Entrance Animation for content
+@keyframes holographic {
+    0% {
+        box-shadow: 0 0 10px var(--color-accent);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--color-neutral);
+    }
+    100% {
+        box-shadow: 0 0 10px var(--color-accent);
+    }
+}
+
+@keyframes entrance {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.entrance-animation {
+    animation: entrance 0.7s ease-out;
+}
+
+.holographic-effect {
+    animation: holographic 3s infinite;
+}
+
+// Pulse Animation (ideal for loading states or micro-interactions
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+// 3D rotattion for interactive objects
+@keyframes rotate3d {
+    from {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+    to {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+
+.rotate-3d {
+    animation: rotate3d 2s linear infinite;
+}
+
+// Dynamic Gradient Background Animation
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.dynamic-gradient {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s infinite; 
+}
+
+// Glass effect for modals or cards
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 40px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// Common hover effects for images, buttons
+.hover-scale: hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+// Drop shadow for depth on cards and modals
+.drop-shadow {
+    box-shadow: 0 40px 8px rgba(0, 0, 0, 0.2);
+}
