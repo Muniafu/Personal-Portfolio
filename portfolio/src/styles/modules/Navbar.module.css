@@ -1,4 +1,4 @@
-// Navbar Container
+/* Navbar Container */
 .navbar {
     @apply glass-effect fixev w-full z-50;
     background-color: var(--color-primary);
@@ -7,15 +7,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
-// Logo Styling
-.navLogo {
+/*Logo Styling */
+.logo {
     font-size: 1.5rem;
+    color: var(--color-accent);
     font-weight: bold;
 }
 
-// Navigation links container
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation links container */ 
 .NavLinks {
     display: flex;
     gap: 1rem;
@@ -33,6 +39,40 @@
     content: '';
 }
 
-.NavLink:hover::after {
+.NavLink:hover::after,
+.NavLink:focus-visible::after {
     @apply w-full;
+}
+
+.toogle {
+    @apply text-light hover: text-accent;
+    transition: all 0.3s ease;
+}
+
+.themeToggle {
+    @apply text-light hover:text-accent;
+    transition: transform 0.3s ease;
+}
+
+.themeToggle:hover {
+    transform: rotate(15deg);
+}
+
+.mobileNav {
+    @apply overflow-hidden max-h-0 transition-all duration 300;
+}
+
+.mobileNav.show {
+    @apply max-h-96;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar,
+    .logo,
+    .NavLink::after,
+    .toogle,
+    .themeToggle,
+    .mobileNav {
+        transition: none !import;
+    }
 }
